@@ -14,4 +14,4 @@ client.on('ready', () => {
 })
 
 client.login('ODk5MTQ5MjUzMzAwMDc2NjE0.GiEVdC.qWE3nbGmhSv4Qcyii5d-1UGtLB14JG81Lja_QI')
-app.listen(8080)
+app.listen(80)
