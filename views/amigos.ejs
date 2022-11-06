@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>amiguitos fofos</title>
+    <link rel="stylesheet" href="friends.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"content="default-src *; img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
+</head>
+
+<body>
+  <script>document.body.style.backgroundImage = `url('https://cdn.discordapp.com/attachments/899776422179127336/1038622257871851530/unknown.jpg')`</script>
+  
+    <div>
+        <div id="friends" style="cursor:pointer;right:10px" onclick="voltar()">voltar</div>
+    </div>
+  
+    <div id="container">
+        
+		 <% for(var kk of migs) { %>
+            <div id="friend">
+                <div id="avatar"
+                    style="background-image: url('<%= kk.user.displayAvatarURL({dynamic: true, format: "png"}) %>')">
+                </div>
+                <div id="desc_container">
+                    <br>
+                     <h2><span>
+                        <%= kk.user.username %>
+                    </span></h2>
+                    <div id="description">
+                        <%= kk.texto %>
+                    </div>
+                </div>
+            </div>
+	    <% } %>
+
+</body>
+
+<script>
+    const voltar = () => window.location.href = "/"
+</script>
+</html>
